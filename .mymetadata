@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="DataAnalyse"
+  id="myeclipse.1416632975038"
+  context-root="/DataAnalyse"
+  j2ee-spec="6.0"
+  archive="DataAnalyse.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,77 @@
+body { 
+    margin:0; 
+    padding:10px 5px; 
+    font-size:12px; 
+    font-family:verdana,arial,sans-serif,"宋体"; 
+} 
+#warp { 
+    width:800px; 
+    margin:0 auto; 
+} 
+/* TAB样式 开始 */ 
+ul.domtabs { 
+    list-style: none; 
+    font-size: 0.9em; 
+    border-bottom: 1px solid #000000; 
+    margin: 0 0 20px 0; 
+    padding: 0 30px 2px 0; 
+    text-align: right; 
+} 
+ul.domtabs li { 
+    display: inline; 
+    margin: 0; 
+} 
+ul.domtabs a:link, 
+ul.domtabs a:visited, 
+ul.domtabs a:active, 
+ul.domtabs a:hover { 
+    text-decoration: none; 
+    padding: 2px 5px 4px 5px; 
+    position: relative; 
+    bottom: 1px; 
+    color: #EA8544; 
+} 
+ul.domtabs li.active a:link, 
+ul.domtabs li.active a:visited, 
+ul.domtabs li.active a:active, 
+ul.domtabs li.active a:hover { 
+    background:#fff; 
+    padding: 2px 10px 4px 10px; 
+    border: 1px solid #000000; 
+    border-bottom: 1px solid #fff; 
+    position: relative; 
+    bottom: 1px; 
+    color: #000000; 
+    font-weight:bold; 
+} 
+ul.domtabs a:hover { 
+    text-decoration: underline; 
+    color: #000000; 
+} 
+ul.domtabs li.active a:hover { 
+    text-decoration: none; 
+} 
+/* 前后跳转 */ 
+ul.prevnext { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: .5em 0; 
+    border-top: 1px solid #000000; 
+} 
+ul.prevnext li a { 
+    display: block; 
+    width: 6em; 
+    color: #FFF; 
+    background-color: #000000; 
+    padding: 2px 0; 
+    text-align: center; 
+    text-decoration: none; 
+    font:12px bold "verdana"; 
+} 
+ul.prevnext li a:hover { 
+    color: #FFF; 
+    background-color: #EA8544; 
+} 
+ul.prevnext .prev { float: left; } 
+ul.prevnext .next { float: right; } 
+h2.title {color:#000000;} 

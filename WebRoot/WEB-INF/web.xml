@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchAction1</servlet-name>
+    <servlet-class>servlet.SearchAction1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowAllServlet</servlet-name>
+    <servlet-class>com.wky.servlet.ShowAllServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>JqueryCloudServlet</servlet-name>
+    <servlet-class>com.wky.servlet.JqueryCloudServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowWeiboServlet</servlet-name>
+    <servlet-class>com.wky.servlet.ShowWeiboServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SentimentPieWeiboServlet</servlet-name>
+    <servlet-class>com.wky.servlet.SentimentPieWeiboServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowAllByHotWordServlet</servlet-name>
+    <servlet-class>com.wky.servlet.ShowAllByHotWordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PlaceAnalyseServlet</servlet-name>
+    <servlet-class>com.wky.servlet.PlaceAnalyseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Artificial_Neural_Networks_Servlet</servlet-name>
+    <servlet-class>com.wky.servlet.Artificial_Neural_Networks_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowAprioriServlet</servlet-name>
+    <servlet-class>com.wky.servlet.ShowAprioriServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AprioriUploadHandleServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AprioriUploadHandleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.wky.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddUserServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AddUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AHPUploadHandleServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AHPUploadHandleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AnnUploadHandleServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AnnUploadHandleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AnnForcastServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AnnForcastServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ImportAnnForcastServlet</servlet-name>
+    <servlet-class>com.wky.servlet.ImportAnnForcastServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowAhpServlet1</servlet-name>
+    <servlet-class>com.wky.servlet.ShowAhpServlet1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ListFileServlet</servlet-name>
+    <servlet-class>com.wky.servlet.ListFileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DownLoadServlet</servlet-name>
+    <servlet-class>com.wky.servlet.DownLoadServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ShowAllServlet</servlet-name>
+    <url-pattern>/ShowAllServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowWeiboServlet</servlet-name>
+    <url-pattern>/ShowWeiboServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SentimentPieWeiboServlet</servlet-name>
+    <url-pattern>/SentimentPieWeiboServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAllByHotWordServlet</servlet-name>
+    <url-pattern>/ShowAllByHotWordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PlaceAnalyseServlet</servlet-name>
+    <url-pattern>/PlaceAnalyseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Artificial_Neural_Networks_Servlet</servlet-name>
+    <url-pattern>/Artificial_Neural_Networks_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAprioriServlet</servlet-name>
+    <url-pattern>/ShowAprioriServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AprioriUploadHandleServlet</servlet-name>
+    <url-pattern>/AprioriUploadHandleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddUserServlet</servlet-name>
+    <url-pattern>/AddUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AHPUploadHandleServlet</servlet-name>
+    <url-pattern>/AHPUploadHandleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AnnUploadHandleServlet</servlet-name>
+    <url-pattern>/AnnUploadHandleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AnnForcastServlet</servlet-name>
+    <url-pattern>/AnnForcastServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ImportAnnForcastServlet</servlet-name>
+    <url-pattern>/ImportAnnForcastServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAhpServlet1</servlet-name>
+    <url-pattern>/ShowAhpServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListFileServlet</servlet-name>
+    <url-pattern>/ListFileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownLoadServlet</servlet-name>
+    <url-pattern>/DownLoadServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <jsp-config>
+  	<taglib>
+        <taglib-uri>http://java.sun.com/jstl/fmt</taglib-uri>
+        <taglib-location>/WEB-INF/fmt.tld</taglib-location>
+    </taglib>
+    <taglib>
+        <taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+        <taglib-location>/WEB-INF/c.tld</taglib-location>
+    </taglib>
+    <taglib>
+        <taglib-uri>http://java.sun.com/jstl/sql</taglib-uri>
+        <taglib-location>/WEB-INF/sql.tld</taglib-location>
+    </taglib>
+    <taglib>
+        <taglib-uri>http://java.sun.com/jstl/x</taglib-uri>
+        <taglib-location>/WEB-INF/x.tld</taglib-location>
+    </taglib>
+  </jsp-config>
+ 
+     <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/error.jsp</location>
+    </error-page>  
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/404.jsp</location>
+    </error-page>  
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/error.jsp</location>
+    </error-page> 
+
+    
+    <mime-mapping>
+     <extension>xls</extension>
+     <mime-type>application/octet-stream</mime-type>
+    </mime-mapping>
+    <mime-mapping>    
+        <extension>rar</extension>    
+        <mime-type>application/octet-stream</mime-type>    
+    </mime-mapping>  
+    <mime-mapping>    
+        <extension>doc</extension>    
+        <mime-type>application/octet-stream</mime-type>    
+    </mime-mapping>  
+        <mime-mapping>    
+        <extension>snet</extension>    
+        <mime-type>application/octet-stream</mime-type>    
+    </mime-mapping>   
+  
+  	<session-config>     
+  		<session-timeout>0</session-timeout> 
+  	</session-config> 
+</web-app>

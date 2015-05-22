@@ -1,0 +1,10 @@
+.div_shadow{
+border:#909090 1px solid;
+background:#fff;
+color:#333;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";  /* For IE 8 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');  /* For IE 5.5 - 7 */
+-moz-box-shadow: 2px 2px 10px #909090;/* for firefox */
+-webkit-box-shadow: 2px 2px 10px #909090;/* for safari or chrome */
+box-shadow:2px 2px 10px #909090;/* for opera or ie9 */
+}

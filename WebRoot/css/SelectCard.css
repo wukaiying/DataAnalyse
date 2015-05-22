@@ -1,0 +1,81 @@
+ a {
+     text-decoration: none;
+ }
+ ul, li, p {
+     list-style-type: none;
+     margin: 0px;
+     padding: 0px;
+     font-size: 12px;
+ }
+ #tabs {
+     width: 1000px;
+     border: solid 1px #dddddd;
+     margin: 50px auto;
+     padding: 5px;
+     overflow: hidden;
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     border-bottom-left-radius: 4px;
+     border-bottom-right-radius: 4px;
+ }
+ #tabs ul.tabs_header {
+     display: block;
+     position: relative;
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     border: 1px solid #aaaaaa;
+     background-color: #cccccc;
+     padding: 5px 5px 0px;
+     clear: both;
+     height: 26px;
+     line-height: 26px;
+ }
+ #tabs ul.tabs_header li {
+     border: solid 1px #d3d3d3;
+     border-bottom: 0 none !important;
+     float: left;
+     list-style: none outside none;
+     margin: 0px 5px;
+     position: relative;
+     top: 1px;
+     height: 24px; 
+     /*此处要加上背景颜色，否则ie6下没有边框,（奇怪）有时在ie6下边框会不出现，刚刚又试了了一下居然又不出现问题了*/
+     background-color: #F2F2F2; 
+     /*圆角样式，较新版本的浏览器才支持，ff8.0支持，ie只有ie9支持*/
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     padding: 0px 5px;
+ }
+ #tabs .tabs_header li a {
+     color: #333;
+ }
+ #tabs .tabs_header li.hover {
+     border: solid 1px #AAAAAA;
+     background-color: #E4E4E4;
+ }
+ #tabs .tabs_header li.active {
+     padding-bottom: 1px;
+     margin-bottom: 0px;
+     border: solid 1px #AAAAAA;
+     background-color: #FFFFFF;
+ }
+ 
+ #tabs div.tabs_content1 {
+     border: solid 0px #AAAAAA;
+     padding: 10px;
+     border-top: none;
+     overflow: hidden;
+ }
+  #tabs div.tabs_content2 {
+     border: solid 0px #AAAAAA;
+     padding: 10px;
+     border-top: none;
+     overflow: hidden;
+ }
+  #tabs div.tabs_content3 {
+     border: solid 0px #AAAAAA;
+     padding: 10px;
+     border-top: none;
+     overflow: hidden;
+ }
+

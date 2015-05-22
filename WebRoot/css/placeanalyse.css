@@ -1,0 +1,33 @@
+#main {
+ float: left;
+ height: auto;
+ width: auto;
+ border: 0px solid #000000;
+}
+#left {
+ float: left;
+ height: 300px;
+ width: 400px;
+ border: 1px solid #000000;
+}
+#right {
+ float: right;
+ height: 300px;
+ width: 400px;
+ border: 1px solid #000000;
+}
+.left {
+ float: left;
+ height: 300px;
+ width: 400px;
+ border: 1px solid #000000;
+}
+.right {
+ float: right;
+ height: 300px;
+ width: 400px;
+ border: 1px solid #000000;
+}
+.left_div {
+ border: 1px solid #999999;
+}
