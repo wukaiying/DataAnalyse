@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,8 +19,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.poi.ss.usermodel.Row;
 
+import bean.Apriori;
+
 import com.wky.apriori.Apriori2;
 import com.wky.dbUtils.ExcelUtil;
+import com.wky.model.dao.AprioriDao;
+import com.wky.model.factory.AprioriDaoFactory;
 
 public class ShowAprioriServlet extends HttpServlet {
 	
@@ -93,6 +98,13 @@ public class ShowAprioriServlet extends HttpServlet {
 		Map<String,Double> relationRulesMap=ap.getRelationRules(frequentCollectionMap,CONFIDENCE);
 	    request.setAttribute("relationRulesMap", relationRulesMap);
 	    request.getSession().setAttribute("sessionRelationRulesMap", relationRulesMap);
+	    //把数据也插入数据库一份
+	    Apriori apriori = new Apriori();
+	    apriori.setAprioriData(relationRulesMap.toString());
+	    apriori.setTime(new Date());
+	    AprioriDao aprioriDao = AprioriDaoFactory.getAprioriDaoInstance();
+	    aprioriDao.addAprioriData(apriori);
+	    
 	    System.out.println("----------------关联规则"+"----------------");
         Set<String> rrKeySet=relationRulesMap.keySet();
         for(String rrKey:rrKeySet){

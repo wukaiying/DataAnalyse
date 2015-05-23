@@ -37,6 +37,8 @@ import org.joone.net.NeuralNet;
 import org.joone.net.NeuralNetAttributes;
 import org.joone.util.NormalizerPlugIn;
 
+import bean.Ann;
+
 import com.alibaba.fastjson.JSON;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.AxisType;
@@ -50,6 +52,8 @@ import com.wky.ann.Artificial_Neural_Networks;
 import com.wky.dbUtils.Matrix;
 import com.wky.dbUtils.ReadFile;
 import com.wky.dbUtils.WriteFile;
+import com.wky.model.dao.AnnDao;
+import com.wky.model.factory.AnnDaoFactory;
 
 public class Artificial_Neural_Networks_Servlet extends HttpServlet implements NeuralNetListener{
 	
@@ -266,24 +270,22 @@ public class Artificial_Neural_Networks_Servlet extends HttpServlet implements N
         System.out.println("dropDownList:"+dropDownList);
         request.setAttribute("annBar", annBar.toString());
         request.getSession().setAttribute("sessionAnnBar", annBar.toString());
-        //把数据输入到Map拼凑成key-value格式
-        Map annForcastMap = new HashMap();
-        for(int i=1;i<=index;i++){
-        	annForcastMap.put(i, annForcastResult.get(i-1));
-        }
-        //把map转化成json输出到前台,并写入文件
-        String annForcastMapJson = JSON.toJSONString(annForcastMap);
-        wf.writeFile("annForcastMapJson.txt", annForcastMapJson.toString());
-        request.setAttribute("annForcastMapJson", annForcastMapJson);
-        //网络测试输出到文件
-        Object annForcastResultJson = JSON.toJSON(annForcastResult);
-        wf.writeFile("annForcastResult.txt", annForcastResultJson.toString());
-        //发送到管理员前台
-        request.setAttribute("annForcastResultJson", annForcastResultJson);
+        
+        //数据库操作
+        Ann ann = new Ann();
+        ann.setTime(new Date());
+        ann.setDataType(dropDownList);
+        ann.setAnnData(annBar.toString());
+        ann.setTrainError(attrib.getTrainingError());
+        ann.setEpoch(attrib.getLastEpoch());
+        
+        AnnDao annDao = AnnDaoFactory.getAnnDaoInstance();
+        annDao.addAnnData(ann);
+        
         ServletContext servletContext = getServletContext();
 		RequestDispatcher dispather = servletContext.getRequestDispatcher("/ann/TrainAndSave.jsp");
 		dispather.forward(request, response);
-		printout.print(annForcastMapJson);// 发送jsonmap数据到前端
+	
 		printout.flush();
 		printout.close();
 	}

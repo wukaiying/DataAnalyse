@@ -13,4 +13,5 @@ public interface DairyDao {
 	public List<StringBuffer> findDairyByElemTop10(String elem);
 	public List<StringBuffer> findDairyByElem(String elem);
 	public StringBuffer getElemStandard(String elem);
+	
 }

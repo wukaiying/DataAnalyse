@@ -119,6 +119,13 @@
     <servlet-name>DownLoadServlet</servlet-name>
     <servlet-class>com.wky.servlet.DownLoadServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>HistorySearchServlet</servlet-name>
+    <servlet-class>com.wky.servlet.HistorySearchServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -203,6 +210,10 @@
   <servlet-mapping>
     <servlet-name>DownLoadServlet</servlet-name>
     <url-pattern>/DownLoadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HistorySearchServlet</servlet-name>
+    <url-pattern>/HistorySearchServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

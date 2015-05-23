@@ -3,6 +3,7 @@ package com.wky.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -17,6 +18,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.poi.ss.usermodel.Row;
 
+import bean.AHP;
+
 import com.alibaba.fastjson.JSON;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.AxisType;
@@ -30,6 +33,8 @@ import com.github.abel533.echarts.series.Pie;
 import com.github.abel533.echarts.style.ItemStyle;
 import com.wky.ahp.AHPComputeWeight;
 import com.wky.dbUtils.ExcelUtil;
+import com.wky.model.dao.AHPDao;
+import com.wky.model.factory.AHPDaoFactory;
 
 public class ShowAhpServlet1 extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -171,14 +176,24 @@ public class ShowAhpServlet1 extends HttpServlet {
 			GsonOption weightBar = WeightOptionBar(rowName,weight); 
 			request.setAttribute("weightBar", weightBar.toString());
 			request.getSession().setAttribute("sessionWeightBar", weightBar.toString());
+			
 			//发送weightPie到前台
 			GsonOption weightPie = WeightOptionPie(rowName,weight); 
 			request.setAttribute("weightPie", weightPie.toString());
 			request.getSession().setAttribute("sessionWeightPie", weightPie.toString());
+			
 			//发送productRisk到前台
 			GsonOption productRiskBar = productRiskOptionBar(colName,productRisk,productRiskSt); 
 			request.setAttribute("productRiskBar", productRiskBar.toString());
 			request.getSession().setAttribute("sessionProductRiskBar", productRiskBar.toString());
+			
+			//存入数据库
+			AHP ahp = new AHP();
+			ahp.setTime(new Date());
+			ahp.setWeightData(weightBar.toString());
+			ahp.setRiskData(productRiskBar.toString());
+			AHPDao ahpDao = AHPDaoFactory.getAprioriDaoInstance();
+			ahpDao.addAHPData(ahp);
 			ServletContext servletContext = getServletContext();			
 			RequestDispatcher dispather = servletContext.getRequestDispatcher("/ahp/show_ahp.jsp");	
 			dispather.forward(request, response);
