@@ -52,6 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		});
     		
 		} );
+		
 	  </script>
   </head>
   
@@ -59,17 +60,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <div class="mainpanel" style="width: 100%;">
   	 <div class="pageheader">
                     <h2><i class="fa fa-bug"></i> 指标约减(关联规则)</h2>
-                    <div class="breadcrumb-wrapper">
-                        <span class="label">You are here:</span>
-                        <ol class="breadcrumb">
-                            <li><a href="index.html">Bracket</a></li>
-                            <li><a href="bug-tracker.html">Bug Tracker</a></li>
-                            <li class="active">Summary</li>
-                        </ol>
-                    </div>
+                    
          </div>
           <div class="contentpanel">
-	 	 	 <div>${message }</div>
+	 	 	 <font color="red">${requestScope.error }</font>
 		  	 <form action="ShowAprioriServlet" method="post" name="form">
 				<div align="center">
 					<div>

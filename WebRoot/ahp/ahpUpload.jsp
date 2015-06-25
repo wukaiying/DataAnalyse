@@ -21,7 +21,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
    		<form action="AHPUploadHandleServlet" enctype="multipart/form-data" method="post">
-		         上传用户：<input type="text" name="username"><br/>
+		         上传数据类型：<select name="category">
+					    <option value="dairy" selected="selected">奶制品</option>
+					    <option value="wine">酒类</option>
+					    <option value="other" >其他</option>							  
+					 </select>
 		         上传文件：<input type="file" name="file1"><br/>
 		  	<input type="submit" value="上传数据">
 		</form>

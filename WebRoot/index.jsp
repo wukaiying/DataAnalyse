@@ -14,7 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  <script type="text/javascript" src="js/common.js"></script>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>首页</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -50,21 +50,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!--菜单-->
     <div class="layout_left_menu">
         <ul id="menu">
-            <li class="childUlLi" id="shouye">
-               <a href="Main.jsp"  target="menuFrame"><i class="glyph-icon icon-home"></i>首页</a>
-                <ul>
-                    <!--  <li><a href="TagCloud.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>网络信息热点</a></li>-->
-                    <!--  <li><a href="ShowAll/ShowAllByHotWordNew.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>热词分析</a></li>-->
-                    <li><a href="Main.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>总体展示</a></li>
-                </ul>
-            </li>
+         
+            
             <li class="childUlLi" id="tongji">
                 <a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-reorder"></i>统计分析</a>
                 <ul>
-                    <li><a href="ShowAll/show_databyelme.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>按元素</a></li>
-                    <li><a href="ShowAll/show_databyplace&elem.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>按元素位置</a></li>
+                    <li><a href="ShowAll/show_databyelme.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>检测指标变化趋势</a></li>
+                    <li><a href="ShowAll/show_databyplace&elem.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>指标及产地趋势分析</a></li>
                     <!--  <li><a href="JCloudNew/ShowWeibo.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>热词分析</a></li>-->
-                    <li><a href="ShowAll/show_databyplace.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>按地理位置</a></li>
+                    <li><a href="ShowAll/show_elem_place.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>指标及检测地点联动变化</a></li>
                     
                 </ul>
             </li>
@@ -75,21 +69,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     	<a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-chevron-right"></i>关联规则</a>
                     	<ul>
                     		<li><a href="Apriori/AprioriUpload.jsp" target="menuFrame"><i class=""></i>导入数据</a></li>
-                    		<li><a href="Apriori/ShowApriori.jsp" target="menuFrame"><i class=""></i>关联分析</a></li>
+                    		
                     	</ul>
                     </li>
                     <li class="childUlLi">
                     	<a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-chevron-right"></i>层次分析</a>
                     	<ul>
                     		<li><a href="ahp/ahpUpload.jsp" target="menuFrame"><i class=""></i>导入数据</a></li>
-                    		<li><a href="ahp/show_ahp.jsp" target="menuFrame"><i class=""></i>层次分析</a></li>
+                    		<li><a href="ahp/ahp_history_search.jsp" target="menuFrame"><i class=""></i>历史查询</a></li>
                     	</ul>
                     </li>
                     <li class="childUlLi" >
                     	<a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-chevron-right"></i>神经网络</a>
                     	<ul>
                     		<li><a href="ann/annUpload.jsp" target="menuFrame"><i class=" "></i>导入训练及泛化数据</a></li>
-                    		<li><a href="ann/import_ann_forcast.jsp" target="menuFrame"><i class=" "></i>导入预测数据并预测</a></li>                
+                    		<li><a href="ann/import_ann_forcast.jsp" target="menuFrame"><i class=" "></i>导入预测数据并预测</a></li>   
+                    	    <li><a href="ann/ann_history_search.jsp" target="menuFrame"><i class=" "></i>历史查询</a></li>        
                     	</ul>
                     </li>
                 </ul>
@@ -97,16 +92,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li class="childUlLi">
                 <a href="#"> <i class="glyph-icon  icon-location-arrow"></i>模型分析(用户)</a>
                 <ul>
-                    <li><a href="user_page/user_apriori.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>指标约减（关联规则）</a></li>
-                    <li><a href="user_page/user_ahp1.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>风险评估（AHP）</a></li>
-                    <li><a href="user_page/user_ann.jsp" target="menuFrame"><i class="glyph-icon icon-chevron-right"></i>风险预测（神经网络）</a></li>
+                	<li class="childUlLi" >
+                    	<a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-chevron-right"></i>指标约减（关联规则）</a>
+                    	<ul>
+                    		<li><a href="user_page/user_apriori.jsp" target="menuFrame"><i class=" "></i>查看最近一次结果</a></li>
+                    		
+                    	</ul>
+                    </li>
+                    <li class="childUlLi" >
+                    	<a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-chevron-right"></i>风险评估（AHP）</a>
+                    	<ul>
+                    		<li><a href="user_page/user_ahp1.jsp" target="menuFrame"><i class=" "></i>查看最近一次结果</a></li>      
+                    	    <li><a href="ahp/ahp_history_search.jsp" target="menuFrame"><i class=" "></i>历史查询</a></li>        
+                    	</ul>
+                    </li>
+                    <li class="childUlLi" >
+                    	<a href="user.html"  target="menuFrame"> <i class="glyph-icon icon-chevron-right"></i>神经网络</a>
+                    	<ul>
+                    		<li><a href="user_page/user_ann.jsp" target="menuFrame"><i class=" "></i>查看最近一次结果</a></li>      
+                    	    <li><a href="ann/ann_history_search.jsp" target="menuFrame"><i class=" "></i>历史查询</a></li>        
+                    	</ul>
+                    </li>
                 </ul>
             </li>
             <li class="childUlLi">
                 <a href="role.html" target="menuFrame"> <i class="glyph-icon icon-reorder"></i>设置</a>
                 <ul>
                     <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>修改密码</a></li>
-                    <li><a href="#"><i class="glyph-icon icon-chevron-right"></i>帮助</a></li>
+                    <li><a href="help.jsp"><i class="glyph-icon icon-chevron-right"></i>帮助</a></li>
                 </ul>
             </li>
             

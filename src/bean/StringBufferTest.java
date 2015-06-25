@@ -9,6 +9,10 @@ public class StringBufferTest {
 			System.out.println(l);
 		}
 		
+		String st = "asdf";
+		String str = st.replace("df", "re");
+		System.out.println(str);
+		
 	}
 
 }

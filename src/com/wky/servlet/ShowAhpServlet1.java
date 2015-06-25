@@ -55,6 +55,7 @@ public class ShowAhpServlet1 extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		String fileFullPath = request.getParameter("fileFullPath");
+		String category = request.getParameter("category");
 		System.out.println(fileFullPath);
 		try {
 			ExcelUtil eu = new ExcelUtil();
@@ -124,6 +125,11 @@ public class ShowAhpServlet1 extends HttpServlet {
 			for(double x:weight){
 				System.out.println(x);
 			}
+			//weight[]转化成字符串形式。
+			StringBuffer weightSb = new StringBuffer();
+			for(int i=0;i<weight.length;i++){
+				weightSb.append(weight[i]+",");
+			}
 			
 			//计算样品风险值(权值乘以每一个样品各个指标的值)
 			DecimalFormat dt = new DecimalFormat("######0.00");
@@ -135,6 +141,11 @@ public class ShowAhpServlet1 extends HttpServlet {
 			}
 			for(int i=0;i<rows-1;i++){
 				productRisk[i] = Double.parseDouble(dt.format(productRisk[i]));
+			}
+			//productRisk[]转成string
+			StringBuffer productRiskSb = new StringBuffer();
+			for(int i=0;i<productRisk.length;i++){
+				productRiskSb.append(productRisk[i]+",");
 			}
 			
 			/**
@@ -190,8 +201,12 @@ public class ShowAhpServlet1 extends HttpServlet {
 			//存入数据库
 			AHP ahp = new AHP();
 			ahp.setTime(new Date());
-			ahp.setWeightData(weightBar.toString());
-			ahp.setRiskData(productRiskBar.toString());
+			ahp.setRowName(sbRowName.toString());
+			ahp.setWeight(weightSb.toString());
+			ahp.setColName(sbColName.toString());
+			ahp.setProductRisk(productRiskSb.toString());
+			ahp.setProductRiskSt(productRiskSt);
+			ahp.setCategory(category);
 			AHPDao ahpDao = AHPDaoFactory.getAprioriDaoInstance();
 			ahpDao.addAHPData(ahp);
 			ServletContext servletContext = getServletContext();			

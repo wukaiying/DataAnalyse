@@ -21,6 +21,7 @@ import org.apache.poi.ss.usermodel.Row;
 
 import bean.Apriori;
 
+import com.alibaba.fastjson.JSON;
 import com.wky.apriori.Apriori2;
 import com.wky.dbUtils.ExcelUtil;
 import com.wky.model.dao.AprioriDao;
@@ -51,15 +52,22 @@ public class ShowAprioriServlet extends HttpServlet {
 		String stCONFIDENCE = request.getParameter("confidence");
 		String fileFullPath = request.getParameter("fileFullPath");
 		System.out.println("fileFullPath:"+fileFullPath);
+		System.out.println("support:"+stSupport);
 		String stMethod = request.getParameter("method");
-		if((stSupport==null||"".equals(stCONFIDENCE))||(stCONFIDENCE==null||"".equals(stCONFIDENCE))){
-			stSupport = "2";
-			stCONFIDENCE="0.99";
+		int SUPPORT = 1;
+		double CONFIDENCE = 0.99;
+		if("".equals(stSupport)||"".equals(stCONFIDENCE)){
+			SUPPORT = 1;
+		    CONFIDENCE = 0.99;
+		}else{
+			SUPPORT = 2;
+		    CONFIDENCE = 0.99;
 		}
-		int SUPPORT = Integer.parseInt(stSupport);
-		double CONFIDENCE = Double.parseDouble(stCONFIDENCE);
-		System.out.println(SUPPORT);
-		System.out.println(CONFIDENCE);
+		
+		
+		
+		//System.out.println(SUPPORT);
+		//System.out.println(CONFIDENCE);
 		//读取excel数据
 		List<String> transList = null;
 		try{
@@ -100,7 +108,7 @@ public class ShowAprioriServlet extends HttpServlet {
 	    request.getSession().setAttribute("sessionRelationRulesMap", relationRulesMap);
 	    //把数据也插入数据库一份
 	    Apriori apriori = new Apriori();
-	    apriori.setAprioriData(relationRulesMap.toString());
+	    apriori.setAprioriData(JSON.toJSONString(relationRulesMap));
 	    apriori.setTime(new Date());
 	    AprioriDao aprioriDao = AprioriDaoFactory.getAprioriDaoInstance();
 	    aprioriDao.addAprioriData(apriori);

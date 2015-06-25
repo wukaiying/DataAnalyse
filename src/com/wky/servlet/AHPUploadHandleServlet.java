@@ -24,6 +24,8 @@ public class AHPUploadHandleServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		request.setCharacterEncoding("utf-8");
 		PrintWriter printOut = response.getWriter();
+		//获取数据类型
+		String category = request.getParameter("category");
 		  //得到上传文件的保存目录，将上传的文件存放于WEB-INF目录下，不允许外界直接访问，保证上传文件的安全
         String savePath = this.getServletContext().getRealPath("/WEB-INF/ahpdata");
         File file = new File(savePath);
@@ -102,6 +104,7 @@ public class AHPUploadHandleServlet extends HttpServlet {
         request.setAttribute("message",message);
         request.setAttribute("fileName", fileName);
         request.setAttribute("fileFullPath", fileFullPath);
+        request.setAttribute("category", category);
         request.getRequestDispatcher("/ahp/show_ahp.jsp").forward(request, response);
 		printOut.flush();
 		printOut.close();

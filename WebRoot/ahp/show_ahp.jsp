@@ -39,18 +39,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        <form class="searchform" action="ShowAhpServlet1" method="post">
 	            <input type="submit" class="form-control" name="keyword" value="点击查看" />
 	            <input type="hidden" name="fileFullPath" value="${fileFullPath }">
+	            <input type="hidden" name="category" value="${category }">
 	        </form>               
 	    </div><!-- headerbar -->
         <div class="pageheader">
             <h2><i class="fa fa-bug"></i> 层次分析(AHP)</h2>
-            <div class="breadcrumb-wrapper">
-                <span class="label">You are here:</span>
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Bracket</a></li>
-                    <li><a href="bug-tracker.html">Bug Tracker</a></li>
-                    <li class="active">Summary</li>
-                </ol>
-            </div>
         </div>
 
         <div class="contentpanel">                    

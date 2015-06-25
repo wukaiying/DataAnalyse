@@ -30,19 +30,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   ${requestScope.message }	
-  <body> 
-	<a href="download.jsp">下载user.doc</a>				
+  <body> 		
   	 <div class="mainpanel" style="width: 100%;">
 	  	 <div class="pageheader">
 	            <h2><i class="fa fa-bug"></i>神经网络训练</h2>
-	            <div class="breadcrumb-wrapper">
-	                <span class="label">You are here:</span>
-	                <ol class="breadcrumb">
-	                    <li><a href="index.html">Bracket</a></li>
-	                    <li><a href="bug-tracker.html">Bug Tracker</a></li>
-	                    <li class="active">Summary</li>
-	                </ol>
-	            </div>
+	            
 	              <form action="Artificial_Neural_Networks_Servlet" method="post">
 					<div align="center">
 						<div>

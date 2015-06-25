@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'ShowData1.jsp' starting page</title>
+    <title>help</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -20,19 +20,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
-  <script type="text/javascript" src="../js/selectcustomer.js"></script></head>
+  </head>
   
   <body>
-  	   <form name="form">
-   		 请选择：
- 		<select name="customers" onchange="showCustomer(document.form.customers.options[document.form.customers.selectedIndex].text)">
-  		  <option value="CrRe">CrRe</option>
-   		  <option value="3052">3055</option>
-  		  <option value="3052">3051</option>
- 		</select>
- 	 </form>
-	  <p>
-	  <div id="txtHint"><b>Customer info will be listed here.</b></div>
-	  </p>
+    输入某元素字段时，为了确保检测指标输入的正确性，特规定输入格式。
+   
   </body>
 </html>

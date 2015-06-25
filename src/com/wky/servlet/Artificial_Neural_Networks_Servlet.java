@@ -249,14 +249,17 @@ public class Artificial_Neural_Networks_Servlet extends HttpServlet implements N
         }
      
         List<double[]> annForcastResult = new ArrayList<double[]>();
+        StringBuffer annForcastDataSb = new StringBuffer();
         for(int i=0;i<index;i++){
         	double[] temp = JooneTools.interrogate(nnet, annForcastList.get(i));
         	for(int j=0;j<temp.length;j++){
         		temp[j] = Double.parseDouble(df.format(temp[j]));
+        		annForcastDataSb.append(Double.parseDouble(df.format(temp[j]))+",");
         	}
         	annForcastResult.add(temp);
         }
         System.out.println("annForcastList"+annForcastList.size());
+        System.out.println("annForcastDataSb：00000000000000000000000000000000000000"+annForcastDataSb);
         //打印测试
         System.out.println("神经网络测试输出");
         for(int i=0;i<index;i++){
@@ -271,14 +274,26 @@ public class Artificial_Neural_Networks_Servlet extends HttpServlet implements N
         request.setAttribute("annBar", annBar.toString());
         request.getSession().setAttribute("sessionAnnBar", annBar.toString());
         
+        //数据插入之前的预处理，首先处理getAnnst
+        StringBuffer AnnStSb = new StringBuffer();
+        double[] AnnSt = getAnnSt(fileFullPath,1,30,11,3,3,3,5);
+        for(int i=0;i<AnnSt.length;i++){
+        	AnnStSb.append(AnnSt[i]+",");
+        }
+       
+        
+        
+        
         //数据库操作
         Ann ann = new Ann();
         ann.setTime(new Date());
         ann.setDataType(dropDownList);
-        ann.setAnnData(annBar.toString());
+        ann.setAnnForcastData(annForcastDataSb.toString());
         ann.setTrainError(attrib.getTrainingError());
         ann.setEpoch(attrib.getLastEpoch());
-        
+        ann.setAnnStandard(AnnStSb.toString());
+        ann.setIndex(index);
+        ann.setLength(shuchu_num);
         AnnDao annDao = AnnDaoFactory.getAnnDaoInstance();
         annDao.addAnnData(ann);
         

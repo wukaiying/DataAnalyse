@@ -125,6 +125,55 @@
     <servlet-name>HistorySearchServlet</servlet-name>
     <servlet-class>com.wky.servlet.HistorySearchServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AHPHistorySearchServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AHPHistorySearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AHPDetailsServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AHPDetailsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AnnHistorySearchServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AnnHistorySearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AnnDetailsServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AnnDetailsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AprioriHistorySearchServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AprioriHistorySearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AprioriDetailServlet</servlet-name>
+    <servlet-class>com.wky.servlet.AprioriDetailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowElemPlaceServlet</servlet-name>
+    <servlet-class>com.wky.servlet.ShowElemPlaceServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
 
 
 
@@ -214,6 +263,34 @@
   <servlet-mapping>
     <servlet-name>HistorySearchServlet</servlet-name>
     <url-pattern>/HistorySearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AHPHistorySearchServlet</servlet-name>
+    <url-pattern>/AHPHistorySearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AHPDetailsServlet</servlet-name>
+    <url-pattern>/AHPDetailsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AnnHistorySearchServlet</servlet-name>
+    <url-pattern>/AnnHistorySearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AnnDetailsServlet</servlet-name>
+    <url-pattern>/AnnDetailsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AprioriHistorySearchServlet</servlet-name>
+    <url-pattern>/AprioriHistorySearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AprioriDetailServlet</servlet-name>
+    <url-pattern>/AprioriDetailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowElemPlaceServlet</servlet-name>
+    <url-pattern>/ShowElemPlaceServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

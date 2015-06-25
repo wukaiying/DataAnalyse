@@ -22,5 +22,6 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/excelReader.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ECharts-2.1.8.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/gson-2.3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/json-lib-2.2.3-jdk15.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
